@@ -1,0 +1,22 @@
+{
+  "title" : "Tên tiêu đề (Không cần thì để bỏ trống)",
+  "description" : "Mô tả tiêu đề (Không cần thì để bỏ trống)",
+  "color" : "0x57F312",
+  
+  "thumbnail" : "link ảnh cho thumbnail (Không cần thì để bỏ trống), ví dụ: https://i.imgur.com/1u1br1j.png",
+  "image" : "link ảnh chống trôi (Không cần thì để bỏ trống), ví dụ: https://i.imgur.com/ubDH3nw.gif",
+  
+  "author" : "Tên tác giả (Không cần thì để bỏ trống)",
+  "avatar_author" : "link ảnh (Không cần thì để bỏ trống), ví dụ: https://i.imgur.com/DgNBF00.png"
+  
+  "fields" : [
+				  {
+					  "name" : "Tên trường thứ 1 (Không cần thì để bỏ trống)",
+					  "value" : "Mô tả trường thứ 1 (Nếu name bị đặt tên thì phải ghi mô tả)"
+				  },
+				  {
+					  "name" : "Tên trường thứ 2 (Không cần thì để bỏ trống)",
+					  "value" : "Mô tả trường thứ 2 (Nếu name bị đặt tên thì phải ghi mô tả)"
+				  }
+			] 
+}
