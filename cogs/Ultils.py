@@ -3,7 +3,8 @@ import pymongo, discord, os
 username = os.environ.get("USERNAME")
 password = os.environ.get("PASSWORD")
 databaseName = os.environ.get("DATABASE")
-cluster = pymongo.MongoClient(f"mongodb+srv://{username}:{password}@cluster0.y5mnt.mongodb.net/{databaseName}?retryWrites=true&w=majority")
+clusterID = os.environ.get("CLUSTERID")
+cluster = pymongo.MongoClient(f"mongodb+srv://{username}:{password}@{clusterID}.y5mnt.mongodb.net/{databaseName}?retryWrites=true&w=majority")
 db = cluster.insta 
 
 def getURLimage(attachments):
