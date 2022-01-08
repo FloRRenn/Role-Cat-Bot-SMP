@@ -2,23 +2,23 @@ import cv2
 import logging
 import numpy as np
 
-from PIL import Image as pil_image
+from PIL import Image as IMG
 
-if pil_image is not None:
+if IMG is not None:
     _PIL_INTERPOLATION_METHODS = {
-        "nearest": pil_image.NEAREST,
-        "bilinear": pil_image.BILINEAR,
-        "bicubic": pil_image.BICUBIC,
+        "nearest": IMG.NEAREST,
+        "bilinear": IMG.BILINEAR,
+        "bicubic": IMG.BICUBIC,
     }
     
-    if hasattr(pil_image, "HAMMING"):
-        _PIL_INTERPOLATION_METHODS["hamming"] = pil_image.HAMMING
+    if hasattr(IMG, "HAMMING"):
+        _PIL_INTERPOLATION_METHODS["hamming"] = IMG.HAMMING
         
-    if hasattr(pil_image, "BOX"):
-        _PIL_INTERPOLATION_METHODS["box"] = pil_image.BOX
+    if hasattr(IMG, "BOX"):
+        _PIL_INTERPOLATION_METHODS["box"] = IMG.BOX
         
-    if hasattr(pil_image, "LANCZOS"):
-        _PIL_INTERPOLATION_METHODS["lanczos"] = pil_image.LANCZOS
+    if hasattr(IMG, "LANCZOS"):
+        _PIL_INTERPOLATION_METHODS["lanczos"] = IMGe.LANCZOS
 
 
 def load_img(path, grayscale = False, color_mode = "rgb", target_size = None, interpolation = "nearest"):
@@ -26,11 +26,11 @@ def load_img(path, grayscale = False, color_mode = "rgb", target_size = None, in
         color_mode = "grayscale"
 
     if isinstance(path, type("")):
-        img = pil_image.open(path)
+        img = IMG.open(path)
         
     else:
         path = cv2.cvtColor(path, cv2.COLOR_BGR2RGB)
-        img = pil_image.fromarray(path)
+        img = IMG.fromarray(path)
 
     if color_mode == "grayscale":
         if img.mode != "L":
