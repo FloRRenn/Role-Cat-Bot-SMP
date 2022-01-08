@@ -23,11 +23,7 @@ if pil_image is not None:
 
 def load_img(path, grayscale = False, color_mode = "rgb", target_size = None, interpolation = "nearest"):
     if grayscale is True:
-        logging.warn("grayscale is deprecated. Please use " 'color_mode = "grayscale"')
         color_mode = "grayscale"
-        
-    if pil_image is None:
-        raise ImportError("Could not import PIL.Image. " "The use of `load_img` requires PIL.")
 
     if isinstance(path, type("")):
         img = pil_image.open(path)
